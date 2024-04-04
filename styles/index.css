@@ -1,0 +1,230 @@
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --containerWidth:400px;
+    --containerHeight:400px;
+    --imageSize:100px;
+}
+.page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDE2E0;
+}
+.processing-container{
+    width: var(--containerWidth) ;
+    height: var(--containerHeight);
+    background-color: #FDE2E0;
+}
+.anmtBox,.processing-item
+{   width: 100%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDE2E0;
+}
+.anmtBox{
+    position: relative;
+}
+.processing-item{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imageBox{
+    display: block;
+    width: var(--imageSize);
+}
+.downloadImg{
+    animation-name: downloadAnmt;
+    animation-duration: 1s;
+    opacity: 0;
+}
+.fileImg{
+    animation-name: fileAnmt;
+    animation-duration: 4s;
+    opacity: 0;
+}
+.successImg{
+    animation-name: successAnmt;
+    animation-duration: 5s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes downloadAnmt{
+    from{
+        transform: translate(100px,0);
+        opacity: 1;
+    }
+    to{
+        transform: translate(0,0);
+        opacity: 1;
+    }
+}
+@keyframes fileAnmt{
+    0%{
+        opacity: 0;
+    }
+    24%{
+        opacity: 0;
+    }
+    25%{
+        transform: translate(-150px,0);
+        opacity: 1;
+        scale: 1;
+    }
+    30%{
+        transform: translate(150px,0);
+    }
+    35%{
+        transform: translate(0,0);
+    }
+    40%{
+        transform: translate(0,0);
+        scale: 1.3;
+    }
+    45%{
+        transform: translate(0,0);
+        scale: 1;
+    }
+    50%{
+        transform: translate(-150px,0);
+        scale: 1;
+    }
+    55%{
+        transform: translate(150px,0);
+        scale: 1;
+    }
+    60%{
+        transform: translate(0,0);
+        scale: 1;
+    }
+    65%{
+        transform: translate(0,0);
+        scale: 1.3;
+    }
+    70%{
+        transform: translate(0,0);
+        scale: 1;
+    }
+    75%{
+        transform: translate(-150px,0);
+        scale: 1;
+    }
+    80%{
+        transform: translate(150px,0);
+        scale: 1;
+    }
+    85%{
+        transform: translate(0,0);
+        scale: 1;
+    }
+    90%{
+        transform: translate(0,0);
+        scale: 1.3;
+    }
+    95%{
+        transform: translate(0,0);
+        scale: 1;
+    }
+    to{
+        transform: translate(0,0);
+        opacity: 1.2;
+    }
+}
+@keyframes successAnmt{
+    0{
+       opacity: 0;
+    }
+    80%{
+        opacity: 0;
+        scale: 1;
+    }
+    85%{
+        opacity: 1;
+        scale: 1.2;
+    }
+    90%{
+        opacity: 1;
+        scale: 1;
+    }
+    95%{
+        opacity: 1;
+        scale: 1.2;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.textBox,.processText,.doneText{
+    width: 100%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDE2E0;
+}
+.textBox{
+    position: relative;
+}
+.processText,.doneText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+}
+.processText{
+    opacity: 0;
+    animation-name: processAnmt;
+    animation-duration: 4s;
+}
+.doneText{
+    animation-name: doneAnmt;
+    animation-duration: 4s;
+}
+@keyframes processAnmt{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    35%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    85%{
+        opacity: 0;
+    }
+    90%{
+        opacity: 1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes doneAnmt{
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 0;
+    }
+}
